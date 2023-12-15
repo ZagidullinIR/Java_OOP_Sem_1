@@ -1,0 +1,14 @@
+//   Дан массив двоичных чисел, например [1,1,0,1,1,1] вывести максимальное количество подряд идущих едениц.
+   int[] array = {1,1,0,1,1,1,1,1,1,1};
+   int count = 0;
+   int maxOnes = 0;
+   for (int i = 0; i < array.length; i++) {
+       if(array[i]== 1) count++;
+       else{
+           if(maxOnes < count)
+               maxOnes = count;
+           count = 0;
+       }
+   }
+   if(maxOnes < count) maxOnes = count;
+   System.out.println(maxOnes);
